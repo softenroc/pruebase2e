@@ -1,4 +1,5 @@
-const { Given, When, Then } = require("@cucumber/cucumber");
+const { Given, When, Then, Before } = require("@cucumber/cucumber");
+const expect = require('chai').expect;
 
 Given("I have {int} cukes in my belly", function (cukes) {
   console.log(`Cukes: ${cukes}`);
@@ -17,8 +18,18 @@ When("I enter password {kraken-string}", async function (password) {
   return await element.setValue(password);
 });
 
-When("I click next", async function () {
-  let element = await this.driver.$("#ember12");
+When("I click on element having id {string}", async function (id_element) {  
+  let element = await this.driver.$(id_element);  
+  return await element.click();
+});
+
+When("I click in field having css selector {string}", async function (css_selector) {  
+  let element = await this.driver.$(css_selector);  
+  return await element.click();
+});
+
+When("I click in Sing Out",  async function () {  
+  let element = await this.driver.$('div.ember-basic-dropdown-wormhole');  
 
   return await element.click();
 });
@@ -33,3 +44,29 @@ When("I click in User Staff",  async function () {
 });
 
 
+When('I enter text {string}', async function (text) {
+  try {
+    await this.driver.keys(text);
+  } catch { }
+  return;
+});
+
+When('I click coordinates X equal to {int} and Y equal to {int}', async function(x, y) {
+  return await this.driver.touchAction({ action: 'tap', x: x, y: y });
+});
+
+When('I press enter', async function() {
+  return await this.driver.pressKeyCode(66);
+});
+
+Then("Close the sesion",  async function () {
+  let element = await this.driver.$('/html[1]/body[1]/div[1]/div[1]/ul[1]/li[9]/a[1]');  
+  return await element.click();  
+  
+});
+
+Then('Validate text main error to login equals to {string}', async function (string) {
+  let element = await this.driver.$('p[class="main-error"]');  
+  let p_text = await element.getText();
+  expect(p_text).to.contain(string);
+});
