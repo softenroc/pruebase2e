@@ -23,6 +23,11 @@ When("I click on element having id {string}", async function (id_element) {
   return await element.click();
 });
 
+When("I click on element css_element {string}", async function (css_element) {  
+  let element = await this.driver.$(css_element);  
+  return await element.click();
+});
+
 When("I click in field having css selector {string}", async function (css_selector) {  
   let element = await this.driver.$(css_selector);  
   return await element.click();

@@ -16,7 +16,7 @@ Feature: Iniciar una conversación
     And I wait for 3 seconds
     And I fill on element having id "#user-location" with text "Barranquilla"
     And I wait for 3 seconds
-    And I click on element having id "#ember82"
+    And I click on element css_element "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/header[1]/section[1]/button[1]"
     And I wait for 3 seconds
     And I navigate to page "<URL_STAFF>"
     And I wait for 2 seconds
