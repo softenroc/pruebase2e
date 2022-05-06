@@ -50,7 +50,9 @@ When('I press enter', async function() {
 });
 
 Then("Close the sesion",  async function () {
-  return;
+  let element = await this.driver.$('/html[1]/body[1]/div[1]/div[1]/ul[1]/li[9]/a[1]');  
+  return await element.click();  
+  
 });
 
 Then("Show label not user with that email",  async function () {
