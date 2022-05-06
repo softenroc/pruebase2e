@@ -22,3 +22,14 @@ When("I click next", async function () {
 
   return await element.click();
 });
+
+Given('I click on element having id {string}', function (string) {
+});
+
+When("I click in User Staff",  async function () {  
+  let element = await this.driver.$('div.apps-grid-cell tooltip-centered');  
+
+  return await element.click();
+});
+
+
