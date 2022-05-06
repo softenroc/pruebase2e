@@ -1,4 +1,4 @@
-const { Given, When, Then } = require("@cucumber/cucumber");
+const { Given, When, Then, Before } = require("@cucumber/cucumber");
 const expect = require('chai').expect;
 
 Given("I have {int} cukes in my belly", function (cukes) {
@@ -55,8 +55,8 @@ Then("Close the sesion",  async function () {
   
 });
 
-Then("Show label not user with that email",  async function () {
+Then('Validate text main error to login equals to {string}', async function (string) {
   let element = await this.driver.$('p[class="main-error"]');  
   let p_text = await element.getText();
-  expect(p_text).to.contain("There is no user with that email address.");
+  expect(p_text).to.contain(string);
 });
