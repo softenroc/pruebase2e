@@ -79,8 +79,27 @@ Then("Click en link owner into staff users",  async function () {
   
 });
 
+Then("Click en link author into staff users",  async function () {
+  let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section[1]/section[2]/div[1]/div[2]/a[1]/article[1]/div[2]/div[1]/span[1]');  
+  return await element.click();  
+  
+});
+
 Then('Validate text main error to login equals to {string}', async function (string) {
   let element = await this.driver.$('p[class="main-error"]');  
+  let p_text = await element.getText();
+  expect(p_text).to.contain(string);
+});
+
+
+Then('Validate text main author response equals to {string}', async function (string) {
+  let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section[1]/div[1]/form[1]/div[1]/fieldset[1]/div[3]/p[1]');  
+  let p_text = await element.getText();
+  expect(p_text).to.contain(string);
+});
+
+Then('Validate text main owner response equals to {string}', async function (string) {
+  let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section[1]/div[1]/form[2]/div[1]/fieldset[1]/div[2]/p[1]');  
   let p_text = await element.getText();
   expect(p_text).to.contain(string);
 });
