@@ -25,8 +25,19 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('login', (username, password) => {
-    cy.get('[name="identification"]').type(username)
-    cy.get('[name="password"]').type(password)
-    cy.get('[id="ember12"]').click();
+Cypress.Commands.add('access_valid', () => {
+  cy.get('input[id="ember8"]').type('df.rojasr1@uniandes.edu.co')
+  cy.wait(2000)
+  cy.get('input[id="ember10"]').type('abcd1234567')
+  cy.wait(2000)
+  cy.get('button[id="ember12"]').click()
+  cy.log("Redirección a menu principal")
   })
+
+
+  Cypress.Commands.add('close_session', () => {   
+    cy.wait(2000)        
+    cy.visit('http://localhost:2368/ghost/#/signout')
+    cy.log("Cerrar sesión")
+    cy.wait(2000)
+    })
