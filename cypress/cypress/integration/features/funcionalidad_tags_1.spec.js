@@ -15,7 +15,7 @@ describe("Feature: Opcion Tags", () => {
     cy.get("#ember64 > span").click();
     cy.wait(2000);
     cy.log("And I click save button");
-    cy.get("#ember78 > span").click();
+    cy.get('#ember73 > span').click();
     cy.wait(2000);
     cy.log(
       "Then Validate text main new tag response equals to You must specify a name for the tag."
