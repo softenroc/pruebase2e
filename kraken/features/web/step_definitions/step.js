@@ -97,3 +97,9 @@ Then('Validate value text having id {string} equals to {string}', async function
   expect(p_text).to.contain(data_to_compare);
 });
 
+Then('Validate value text css element {string} contain to {string}', async function (element_id, data_to_compare) {
+  let element = await this.driver.$(element_id);  
+  let p_text = await element.getText();
+  expect(p_text).to.contain(data_to_compare);
+});
+
