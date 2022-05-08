@@ -23,21 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-Cypress.Commands.add("access_valid", () => {
-  cy.log("When I enter email registry");
-  cy.get('input[id="ember8"]').type("df.rojasr1@uniandes.edu.co");
-  cy.wait(2000);
-  cy.log("And I enter password ");
-  cy.get('input[id="ember10"]').type("abcd1234567");
-  cy.wait(2000);
-  cy.log("And I click on element having id ember12");
-  cy.get('button[id="ember12"]').click();
-});
-
-Cypress.Commands.add("close_session", () => {
-  cy.log("Then Close the sesion");
-  cy.wait(2000);
-  cy.visit("http://localhost:2368/ghost/#/signout");
-  cy.wait(2000);
-});
