@@ -67,6 +67,12 @@ When("I fill on element having id {string} with text {string}", async function (
   return await element.setValue(data_to_fill);
 });
 
+When("I fill on field having css selector {string} with text {string}", async function (css_selector, data_to_fill) {
+  let element = await this.driver.$(css_selector);
+  return await element.setValue(data_to_fill);
+});
+
+
 Then("Close the sesion",  async function () {
   let element = await this.driver.$('/html[1]/body[1]/div[1]/div[1]/ul[1]/li[9]/a[1]');  
   return await element.click();  
@@ -76,7 +82,7 @@ Then("Close the sesion",  async function () {
 Then("Click en link owner into staff users",  async function () {
   let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section[1]/section[2]/div[1]/div[1]/a[1]/article[1]');  
   return await element.click();  
-  
+
 });
 
 Then('Validate text main error to login equals to {string}', async function (string) {

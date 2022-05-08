@@ -1,7 +1,8 @@
 {
   "URL_ADMIN": "http://localhost:2368/ghost/#/signin",
   "URL_STAFF": "http://localhost:2368/ghost/#/staff/",
-  "USERNAME1": "df.rojasr1@uniandes.edu.co",
-  "PASSWORD1": "abcd1234567"
+  "URL_PAGES": "http://localhost:2368/ghost/#/pages/",
+  "USERNAME1": "y.zamora@uniandes.edu.co",
+  "PASSWORD1": "0123456789"
 }
 
