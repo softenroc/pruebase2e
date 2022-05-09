@@ -15,3 +15,5 @@
 > "Cucumber 10 Minute Tutorial", [10 Minute Tutorial](https://cucumber.io/docs/guides/10-minute-tutorial/)
 
 Nota: Usar node 12.22.1 (Utilizar nvm para manejar varias versiones). Si se genera algun error en la instalacion, eliminar el archivo: package-lock.json , la carpeta de node_modules y nuevamente ejecutar el npm install. 
+
+Nota: En Windows se genera un error de un path cuando se trata de correr mas de 1 feature. Asi que provisionalmente hay que dejar uno solo con el .feature y los demas cambiarles la extension a por ejm .feature_
