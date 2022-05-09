@@ -1,7 +1,7 @@
 Feature: Acceso a la plataforma
 
   @user2 @web
-  Scenario: Como usuario registrado ingreso un usuario valido y una contraseña invalida entonces retorne
+  Scenario: Como usuario registrado ingreso un usuario valido y una contraseña invalida entonces retorne password incorrecto
     Given I navigate to page "<URL_ADMIN>"
     And I wait for 2 seconds
     When I enter email "<USERNAME1>"
