@@ -20,10 +20,13 @@
 
 #### https://github.com/softenroc/pruebase2e/wiki/Funcionalidades_y_escenarios
 
+### Pros y contras (kraken-cypress)
+
+#### https://github.com/softenroc/pruebase2e/wiki/Pros_y_Contras
 
 ### Instrucciones
 
-##### -- Versión de Node: v16.14.2
+##### -- Versión de Node: v12.22.1
 ##### -- Versión de Ghost: 3.41.1
 
 ### Pasos Cypress
