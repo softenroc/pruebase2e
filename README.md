@@ -33,6 +33,7 @@
 
 #####  1. Abrir en una terminal la carptea cypress.
 #####  2. Ejecutar el comando: npm install
+#####  2.1 Editar el archivo commands.js con los datos de acceso del usuario en ghost admin
 
 #### Para ejecución automática
 
