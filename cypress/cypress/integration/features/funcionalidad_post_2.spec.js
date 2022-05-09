@@ -6,14 +6,8 @@ describe('New Post', () => {
     })
 
     it('Modificamos un post.', () => {
-        cy.log("and I enter email");
-        cy.get('input[id="ember8"]').type('ochoaortizj@gmail.com')
-        cy.wait(2000)
-        cy.log("and I enter password");
-        cy.get('input[id="ember10"]').type('0123456789')
-        cy.wait(2000)
-        cy.log("And I click botton");
-        cy.get('button[id="ember12"]').click()
+        cy.access_valid();
+        
         cy.wait(4000)
         cy.log("And I navigate to page post");
         cy.visit('http://localhost:2368/ghost/#/posts')
