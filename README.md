@@ -20,21 +20,34 @@
 
 #### https://github.com/softenroc/pruebase2e/wiki/Funcionalidades_y_escenarios
 
+
 ### Instrucciones
 
 ##### -- Versión de Node: v16.14.2
 ##### -- Versión de Ghost: 3.41.1
 
-#### Pasos Cypress
+### Pasos Cypress
 
 #####  1. Abrir en una terminal la carptea cypress.
 #####  2. Ejecutar el comando: npm install
-#####  3. Ejecutar el comando: cypress run --headless
+
+### Para ejecución automática
+
+#####  3.1 Ejecutar el comando: cypress run --headless
+
+### Para ejecución manual via interfáz gráfica
+
+#####  3.1 Ejecutar el comando: cypress open
+#####  3.2 Ejecutar uno de los escenarios del listado
+
+
 #### Pasos Kraken
 
-##### 1. Abrir en una terminal la carptea Kraken
+#####  1. Abrir en una terminal la carptea Kraken
 #####  2. Ejecutar el comando: npm install
 #####  3. Ejecutar el comadno: npm install kraken-node
-##### 4. Instalar ADB(https://www.xda-developers.com/install-adb-windows-macos-linux/)
+#####  4. Instalar ADB(https://www.xda-developers.com/install-adb-windows-macos-linux/)
 #####  5. Reiniciar terminal
 #####  6. Ejecutar el comando: npx kraken-node run  
+
+Nota: En Windows se genera un error de un path cuando se trata de correr mas de 1 feature. Asi que provisionalmente hay que dejar uno solo con el .feature y los demas cambiarles la extension a por ejm .feature_
