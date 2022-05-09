@@ -45,7 +45,6 @@ When("I click in User Staff",  async function () {
   return await element.click();
 });
 
-
 When('I enter text {string}', async function (text) {
   try {
     await this.driver.keys(text);
@@ -71,7 +70,6 @@ When("I fill on field having css selector {string} with text {string}", async fu
   let element = await this.driver.$(css_selector);
   return await element.setValue(data_to_fill);
 });
-
 
 Then("Close the sesion",  async function () {
   let element = await this.driver.$('/html[1]/body[1]/div[1]/div[1]/ul[1]/li[9]/a[1]');  
@@ -121,7 +119,6 @@ Then('Validate text main new tag response equals to {string}', async function (s
   let p_text = await element.getText();
   expect(p_text).to.contain(string);
 });
-
 
 Then('Validate tag page not found', async function () {
   let element = await this.driver.$('h2[class="midlightgrey f4 fw3"]');  
