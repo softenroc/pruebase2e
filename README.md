@@ -44,7 +44,7 @@
 #####  3.2 Ejecutar uno de los escenarios del listado
 
 
-#### Pasos Kraken
+### Pasos Kraken
 
 #####  1. Abrir en una terminal la carptea Kraken
 #####  2. Ejecutar el comando: npm install
